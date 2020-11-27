@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="利用列表推导式, 完成以下需求： a.  生成一个存放1-100中各位数为3的数据列表:  1234结果为 [3, 13, 23, 33, 43, 53, 63, 73, 83, 93]list1 &#x3D; [x for x in range(3, 100, 10)]print(list1)  b.  利用列表推到是将 列表中的整数提取出来:  12345例如：[True, 17, &quot;hel">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2020/11/13/day-9%E4%BD%9C%E4%B8%9A/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="利用列表推导式, 完成以下需求： a.  生成一个存放1-100中各位数为3的数据列表:  1234结果为 [3, 13, 23, 33, 43, 53, 63, 73, 83, 93]list1 &#x3D; [x for x in range(3, 100, 10)]print(list1)  b.  利用列表推到是将 列表中的整数提取出来:  12345例如：[True, 17, &quot;hel">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-11-13T07:54:07.296Z">
+<meta property="article:modified_time" content="2020-11-13T07:54:07.296Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-day-9作业" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/13/day-9%E4%BD%9C%E4%B8%9A/" class="article-date">
+  <time datetime="2020-11-13T07:54:07.296Z" itemprop="datePublished">2020-11-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>利用列表推导式, 完成以下需求：</p>
+<p>a.  生成一个存放1-100中各位数为3的数据列表: </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">结果为 [<span class="number">3</span>, <span class="number">13</span>, <span class="number">23</span>, <span class="number">33</span>, <span class="number">43</span>, <span class="number">53</span>, <span class="number">63</span>, <span class="number">73</span>, <span class="number">83</span>, <span class="number">93</span>]</span><br><span class="line"></span><br><span class="line">list1 = [x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>, <span class="number">100</span>, <span class="number">10</span>)]</span><br><span class="line">print(list1)</span><br></pre></td></tr></table></figure>
+
+<p>b.  利用列表推到是将 列表中的整数提取出来: </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">例如：[<span class="literal">True</span>, <span class="number">17</span>, <span class="string">&quot;hello&quot;</span>, <span class="string">&quot;bye&quot;</span>, <span class="number">98</span>, <span class="number">34</span>, <span class="number">21</span>] --- [<span class="number">17</span>, <span class="number">98</span>, <span class="number">34</span>, <span class="number">21</span>]</span><br><span class="line"></span><br><span class="line">list2 = [<span class="literal">True</span>, <span class="number">17</span>, <span class="string">&quot;hello&quot;</span>, <span class="string">&quot;bye&quot;</span>, <span class="number">98</span>, <span class="number">34</span>, <span class="number">21</span>]</span><br><span class="line">list3 = [x <span class="keyword">for</span> x <span class="keyword">in</span> list2 <span class="keyword">if</span> <span class="built_in">type</span>(x) == <span class="built_in">int</span>]</span><br><span class="line">print(list3)</span><br></pre></td></tr></table></figure>
+
+<p>c.  利用列表推导式 存放指定列表中字符串的长度:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">   例如 [<span class="string">&quot;good&quot;</span>, <span class="string">&quot;nice&quot;</span>, <span class="string">&quot;see you&quot;</span>, <span class="string">&quot;bye&quot;</span>] --- [<span class="number">4</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">3</span>]</span><br><span class="line">    </span><br><span class="line">list4 = [<span class="string">&quot;good&quot;</span>, <span class="string">&quot;nice&quot;</span>, <span class="string">&quot;see you&quot;</span>, <span class="string">&quot;bye&quot;</span>]</span><br><span class="line">list5 = [<span class="built_in">len</span>(x) <span class="keyword">for</span> x <span class="keyword">in</span> list4]</span><br><span class="line">print(list5)</span><br></pre></td></tr></table></figure>
+
+<p>d. dict_list = [{“科目”:“政治”, “成绩”:98}, {“科目”:“语文”, “成绩”:77}, {“科目”:“数学”, “成绩”:99}, {“科目”:“历史”, “成绩”:65}]</p>
+<p>去除列表中成绩小于70的字典 【列表推导式完成】</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">   结果为： [&#123;“科目”:“政治”, “成绩”:<span class="number">98</span>&#125;, &#123;“科目”:“语文”, “成绩”:<span class="number">77</span>&#125;, &#123;“科目”:“数学”, “成绩”:<span class="number">99</span>&#125;]</span><br><span class="line">    </span><br><span class="line">dict_list = [&#123;<span class="string">&#x27;科目&#x27;</span>: <span class="string">&#x27;政治&#x27;</span>, <span class="string">&#x27;成绩&#x27;</span>: <span class="number">98</span>&#125;, &#123;<span class="string">&#x27;科目&#x27;</span>: <span class="string">&#x27;语文&#x27;</span>, <span class="string">&#x27;成绩&#x27;</span>: <span class="number">77</span>&#125;, &#123;<span class="string">&#x27;科目&#x27;</span>: <span class="string">&#x27;数学&#x27;</span>, <span class="string">&#x27;成绩&#x27;</span>: <span class="number">99</span>&#125;, &#123;<span class="string">&#x27;科目&#x27;</span>: <span class="string">&#x27;历史&#x27;</span>, <span class="string">&#x27;成绩&#x27;</span>: <span class="number">65</span>&#125;]</span><br><span class="line">new_list = [x <span class="keyword">for</span> x <span class="keyword">in</span> dict_list <span class="keyword">if</span> x.get(<span class="string">&#x27;成绩&#x27;</span>) &gt;= <span class="number">70</span>]</span><br><span class="line">print(new_list)    </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编写函数，求1+2+3+…N的和  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sum1</span>(<span class="params">num</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    :param num: 提供一个数字  (参数说明)</span></span><br><span class="line"><span class="string">    :return: None</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    s = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, num+<span class="number">1</span>):</span><br><span class="line">        s += x</span><br><span class="line">    print(<span class="string">f&#x27;<span class="subst">&#123;num&#125;</span>到1相加的和是<span class="subst">&#123;s&#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="3">
+<li><p>编写一个函数，求多个数中的最大值    </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">max1</span>(<span class="params">*num</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    :param *num: 提供多个数字   (参数说明)</span></span><br><span class="line"><span class="string">    :return: None</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    print(<span class="built_in">max</span>(*num))</span><br><span class="line"></span><br><span class="line">list6 = [<span class="number">10</span>, <span class="number">200</span>, <span class="number">90</span>, <span class="number">30</span>, <span class="number">500</span>, <span class="number">1000</span>]</span><br><span class="line">max1(list6)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编写一个函数，实现摇骰子的功能，打印N个骰子的点数和  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dice_game</span>(<span class="params">num1:<span class="built_in">int</span></span>):</span></span><br><span class="line">    sum1 = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(num1):</span><br><span class="line">        num = randint(<span class="number">1</span>, <span class="number">6</span>)</span><br><span class="line">        print(num, end=<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line">        sum1 += num</span><br><span class="line">    print(<span class="string">f&#x27;点数和:&#x27;</span>, sum1)</span><br><span class="line"></span><br><span class="line">dice_game(<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="5">
+<li><p>编写一个函数，交换指定字典的key和value。 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">  例如:dict1=&#123;&#x27;a&#x27;:1, &#x27;b&#x27;:2, &#x27;c&#x27;:3&#125;  --&gt;  dict1=&#123;1:&#x27;a&#x27;, 2:&#x27;b&#x27;, 3:&#x27;c&#x27;&#125; </span><br><span class="line">        </span><br><span class="line">dict1 = &#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;c&#x27;</span>: <span class="number">3</span>&#125;</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">exchange_dict</span>(<span class="params">**num</span>):</span></span><br><span class="line">    new_dict = &#123;num.get(x): x <span class="keyword">for</span> x <span class="keyword">in</span> num&#125;</span><br><span class="line">    print(new_dict)</span><br><span class="line">exchange_dict(a=<span class="number">1</span>, b=<span class="number">2</span>, c=<span class="number">3</span>)       </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编写一个函数，提取指定字符串中所有的字母，然后拼接在一起产生一个新的字符串  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">例如: 传入&#x27;12a&amp;bc12d-+&#x27;   --&gt;  &#x27;abcd&#x27;  </span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">extract</span>(<span class="params">str1</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    :param str1: 输入指定的字符串   (参数说明)</span></span><br><span class="line"><span class="string">    :return: None</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    new_str = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> str1:</span><br><span class="line">            <span class="keyword">if</span> <span class="string">&#x27;A&#x27;</span> &lt;= x &lt;= <span class="string">&#x27;Z&#x27;</span> <span class="keyword">or</span> <span class="string">&#x27;a&#x27;</span> &lt;= x &lt;= <span class="string">&#x27;z&#x27;</span>:</span><br><span class="line">                new_str += x</span><br><span class="line"></span><br><span class="line">    print(new_str)</span><br><span class="line"></span><br><span class="line">extract(<span class="string">&#x27;12a&amp;bc12d-+&#x27;</span>)    </span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="6">
+<li><p>写一个函数，求多个数的平均值  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mean</span>(<span class="params">*num</span>):</span></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(num) == <span class="number">0</span>:</span><br><span class="line">        print(<span class="string">&#x27;0&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="built_in">sum</span>(num)/<span class="built_in">len</span>(num))</span><br><span class="line"></span><br><span class="line">mean(<span class="number">4</span>, <span class="number">6</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>写一个函数，默认求10的阶乘，也可以求其他数字的阶乘  </p>
+</li>
+</ol>
+   <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">factorial</span>(<span class="params">num</span>):</span></span><br><span class="line">    s = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, num+<span class="number">1</span>):</span><br><span class="line">        s *= x</span><br><span class="line">    print(s)</span><br><span class="line"></span><br><span class="line">factorial(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>=====================注意：以下方法不能使用系统提供的方法和函数，全部自己写逻辑==============</p>
+<ol start="8">
+<li><p>写一个自己的capitalize函数，能够将指定字符串的首字母变成大写字母</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">例如: &#x27;abc&#x27; -&gt; &#x27;Abc&#x27;   &#x27;12asd&#x27;  --&gt; &#x27;12asd&#x27;</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">capitalize</span>(<span class="params">str1:<span class="built_in">str</span></span>):</span></span><br><span class="line">    <span class="keyword">if</span> str1:</span><br><span class="line">        first_chr = str1[<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&#x27;a&#x27;</span> &lt;= str1[<span class="number">0</span>] &lt;= <span class="string">&#x27;z&#x27;</span>:</span><br><span class="line">            first_chr = <span class="built_in">chr</span>(<span class="built_in">ord</span>(str1[<span class="number">0</span>]) - <span class="number">32</span>)</span><br><span class="line">            new_str = first_chr + str1[<span class="number">1</span>:]</span><br><span class="line">            print(new_str)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(str1)</span><br><span class="line">capitalize(<span class="string">&#x27;qwgdqg123&#x27;</span>)   <span class="comment"># Qwgdqg123</span></span><br><span class="line">capitalize(<span class="string">&#x27;2244&#x27;</span>)    <span class="comment"># 2244</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>写一个自己的endswith函数，判断一个字符串是否已指定的字符串结束  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">例如: 字符串<span class="number">1</span>:<span class="string">&#x27;abc231ab&#x27;</span> 字符串<span class="number">2</span>:<span class="string">&#x27;ab&#x27;</span> 函数结果为: <span class="literal">True</span></span><br><span class="line">     字符串<span class="number">1</span>:<span class="string">&#x27;abc231ab&#x27;</span> 字符串<span class="number">2</span>:<span class="string">&#x27;ab1&#x27;</span> 函数结果为: <span class="literal">False</span></span><br><span class="line">                </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">endswith</span>(<span class="params">str2: <span class="built_in">str</span>, char1: <span class="built_in">str</span></span>):</span></span><br><span class="line">    new_str2 = <span class="built_in">list</span>(str2.split(char1))</span><br><span class="line">    <span class="keyword">if</span> new_str2[<span class="number">-1</span>] == <span class="string">&#x27;&#x27;</span>:</span><br><span class="line">        print(<span class="string">f&#x27;函数结果为：<span class="subst">&#123;<span class="literal">True</span>&#125;</span>&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">f&#x27;函数结果为：<span class="subst">&#123;<span class="literal">False</span>&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line">endswith(<span class="string">&#x27;123456xy&#x27;</span>, <span class="string">&#x27;xy&#x27;</span>)   <span class="comment"># 函数结果为：True               </span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="10">
+<li><p>写一个自己的isdigit函数，判断一个字符串是否是纯数字字符串   </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">   例如: <span class="string">&#x27;1234921&#x27;</span>  结果: <span class="literal">True</span></span><br><span class="line">         <span class="string">&#x27;23函数&#x27;</span>   结果: <span class="literal">False</span></span><br><span class="line">         <span class="string">&#x27;a2390&#x27;</span>    结果: <span class="literal">False</span></span><br><span class="line">            </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isdigit</span>(<span class="params">str3: <span class="built_in">str</span></span>):</span></span><br><span class="line">    count = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> s <span class="keyword">in</span> str3:</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&#x27;0&#x27;</span> &lt;= s &lt;= <span class="string">&#x27;9&#x27;</span>:</span><br><span class="line">            count += <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> count == <span class="built_in">len</span>(str3):</span><br><span class="line">        print(<span class="string">f&#x27;结果：<span class="subst">&#123;<span class="literal">True</span>&#125;</span>&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">f&#x27;结果：<span class="subst">&#123;<span class="literal">False</span>&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line">isdigit(<span class="string">&#x27;1234921&#x27;</span>)</span><br><span class="line">isdigit(<span class="string">&#x27;23函数&#x27;</span>)</span><br><span class="line">isdigit(<span class="string">&#x27;a2390&#x27;</span>)            </span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="11">
+<li><p>写一个自己的upper函数，将一个字符串中所有的小写字母变成大写字母   </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">例如: <span class="string">&#x27;abH23好rp1&#x27;</span>   结果: <span class="string">&#x27;ABH23好RP1&#x27;</span>  </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">upper_self</span>(<span class="params"><span class="built_in">str</span></span>):</span></span><br><span class="line">    new_str = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">str</span>:</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&#x27;a&#x27;</span> &lt;= i &lt;= <span class="string">&#x27;z&#x27;</span>:</span><br><span class="line">            up = <span class="built_in">chr</span>(<span class="built_in">ord</span>(i)<span class="number">-32</span>)</span><br><span class="line">            new_str += up</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            new_str += i</span><br><span class="line">    print(new_str)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">upper_self(<span class="string">&#x27;abH23好rp1&#x27;</span>)        </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>写一个自己的rjust函数，创建一个字符串的长度是指定长度，原字符串在新字符串中右对齐，剩下的部分用指定的字符填充  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">   例如: 原字符:<span class="string">&#x27;abc&#x27;</span>  宽度: <span class="number">7</span>  字符:<span class="string">&#x27;^&#x27;</span>    结果: <span class="string">&#x27;^^^^abc&#x27;</span></span><br><span class="line">        原字符:<span class="string">&#x27;你好吗&#x27;</span>  宽度: <span class="number">5</span>  字符:<span class="string">&#x27;0&#x27;</span>    结果: <span class="string">&#x27;00你好吗&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">rjust</span>(<span class="params">str1: <span class="built_in">str</span>, width: <span class="built_in">int</span>, fill_char: <span class="built_in">str</span></span>):</span></span><br><span class="line">    le = <span class="built_in">len</span>(str1)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 处理指定宽度比原字符串宽度小</span></span><br><span class="line">    <span class="keyword">if</span> width &lt; le:</span><br><span class="line">        width = le</span><br><span class="line">        </span><br><span class="line">    <span class="comment"># 处理字符长度不是1的情况</span></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(fill_char) != <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">raise</span> ValueError</span><br><span class="line">    new_str = fill_char*(width-le) + str1</span><br><span class="line">    print(new_str)</span><br><span class="line">    </span><br><span class="line">rjust(<span class="string">&#x27;abc&#x27;</span>, <span class="number">6</span>, <span class="string">&#x27;=&#x27;</span>)   <span class="comment"># ===abc  </span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>写一个自己的index函数，统计指定列表中指定元素的所有下标，如果列表中没有指定元素返回-1</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">例如: 列表: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">45</span>, <span class="string">&#x27;abc&#x27;</span>, <span class="number">1</span>, <span class="string">&#x27;你好&#x27;</span>, <span class="number">1</span>, <span class="number">0</span>]  元素: <span class="number">1</span>   结果: <span class="number">0</span>,<span class="number">4</span>,<span class="number">6</span>  </span><br><span class="line">     列表: [<span class="string">&#x27;赵云&#x27;</span>, <span class="string">&#x27;郭嘉&#x27;</span>, <span class="string">&#x27;诸葛亮&#x27;</span>, <span class="string">&#x27;曹操&#x27;</span>, <span class="string">&#x27;赵云&#x27;</span>, <span class="string">&#x27;孙权&#x27;</span>]  元素: <span class="string">&#x27;赵云&#x27;</span>   结果: <span class="number">0</span>,<span class="number">4</span></span><br><span class="line">     列表: [<span class="string">&#x27;赵云&#x27;</span>, <span class="string">&#x27;郭嘉&#x27;</span>, <span class="string">&#x27;诸葛亮&#x27;</span>, <span class="string">&#x27;曹操&#x27;</span>, <span class="string">&#x27;赵云&#x27;</span>, <span class="string">&#x27;孙权&#x27;</span>]  元素: <span class="string">&#x27;关羽&#x27;</span>   结果: <span class="number">-1</span> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index_self</span>(<span class="params"><span class="built_in">list</span>, char</span>):</span></span><br><span class="line">    flag = <span class="literal">False</span></span><br><span class="line">    <span class="keyword">for</span> index <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(<span class="built_in">list</span>)):</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">list</span>[index] == char:</span><br><span class="line">            print(index)</span><br><span class="line">            flag = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">if</span> flag == <span class="literal">False</span>:</span><br><span class="line">        print(<span class="number">-1</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">index_self([<span class="number">1</span>, <span class="number">2</span>, <span class="number">45</span>, <span class="string">&#x27;abc&#x27;</span>, <span class="number">1</span>, <span class="string">&#x27;你好&#x27;</span>, <span class="number">1</span>, <span class="number">0</span>], <span class="number">1</span>)</span><br><span class="line">index_self([<span class="string">&#x27;赵云&#x27;</span>, <span class="string">&#x27;郭嘉&#x27;</span>, <span class="string">&#x27;诸葛亮&#x27;</span>, <span class="string">&#x27;曹操&#x27;</span>, <span class="string">&#x27;赵云&#x27;</span>, <span class="string">&#x27;孙权&#x27;</span>], <span class="string">&#x27;赵云&#x27;</span>)</span><br><span class="line">index_self([<span class="string">&#x27;赵云&#x27;</span>, <span class="string">&#x27;郭嘉&#x27;</span>, <span class="string">&#x27;诸葛亮&#x27;</span>, <span class="string">&#x27;曹操&#x27;</span>, <span class="string">&#x27;赵云&#x27;</span>, <span class="string">&#x27;孙权&#x27;</span>], <span class="string">&#x27;关羽&#x27;</span>)                </span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="14">
+<li><p>写一个自己的len函数，统计指定序列中元素的个数  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">例如: 序列:[<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>]    结果: <span class="number">4</span></span><br><span class="line">     序列:(<span class="number">1</span>, <span class="number">34</span>, <span class="string">&#x27;a&#x27;</span>, <span class="number">45</span>, <span class="string">&#x27;bbb&#x27;</span>)  结果: <span class="number">5</span>  </span><br><span class="line">     序列:<span class="string">&#x27;hello w&#x27;</span>    结果: <span class="number">7</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">len_self</span>(<span class="params">char</span>):</span></span><br><span class="line">    total = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> char:</span><br><span class="line">        total += <span class="number">1</span></span><br><span class="line">    print(total)</span><br><span class="line"></span><br><span class="line">len_self([<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>])</span><br><span class="line">len_self((<span class="number">1</span>, <span class="number">34</span>, <span class="string">&#x27;a&#x27;</span>, <span class="number">45</span>, <span class="string">&#x27;bbb&#x27;</span>))</span><br><span class="line">len_self(<span class="string">&#x27;hello w&#x27;</span>)            </span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="15">
+<li><p>写一个自己的max函数，获取指定序列中元素的最大值。如果序列是字典，取字典值的最大值  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">例如: 序列:[<span class="number">-7</span>, <span class="number">-12</span>, <span class="number">-1</span>, <span class="number">-9</span>]    结果: <span class="number">-1</span>   </span><br><span class="line">     序列:<span class="string">&#x27;abcdpzasdz&#x27;</span>    结果: <span class="string">&#x27;z&#x27;</span>  </span><br><span class="line">     序列:&#123;<span class="string">&#x27;小明&#x27;</span>:<span class="number">90</span>, <span class="string">&#x27;张三&#x27;</span>: <span class="number">76</span>, <span class="string">&#x27;路飞&#x27;</span>:<span class="number">30</span>, <span class="string">&#x27;小花&#x27;</span>: <span class="number">98</span>&#125;   结果: <span class="number">98</span></span><br><span class="line">            </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">max1</span>(<span class="params">seq</span>):</span></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">type</span>(seq) == <span class="built_in">dict</span>:</span><br><span class="line">        seq = seq.values()</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">type</span>(seq) <span class="keyword">not</span> <span class="keyword">in</span> (<span class="built_in">list</span>, <span class="built_in">tuple</span>):</span><br><span class="line">        seq = <span class="built_in">list</span>(seq)</span><br><span class="line">    temp = seq[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> seq[<span class="number">1</span>:]:</span><br><span class="line">        <span class="keyword">if</span> item &gt; temp:</span><br><span class="line">            temp = item</span><br><span class="line">     print(<span class="string">f&#x27;最大值：<span class="subst">&#123;temp&#125;</span>&#x27;</span>)    </span><br><span class="line">    </span><br><span class="line">max1([<span class="number">23</span>, <span class="number">45</span>, <span class="number">67</span>, <span class="number">2</span>])   <span class="comment"># 最大值:67</span></span><br><span class="line">max1(&#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">100</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">34</span>, <span class="string">&#x27;c&#x27;</span>: <span class="number">50</span>&#125;)   <span class="comment"># 最大值:100</span></span><br><span class="line">max1(&#123;<span class="number">23</span>, <span class="number">770</span>, <span class="number">98</span>&#125;)  <span class="comment"># 最大值:770</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="16">
+<li><p>写一个函数实现自己in操作，判断指定序列中，指定的元素是否存在  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">例如: 序列: (<span class="number">12</span>, <span class="number">90</span>, <span class="string">&#x27;abc&#x27;</span>)   元素: <span class="string">&#x27;90&#x27;</span>     结果: <span class="literal">False</span></span><br><span class="line">     序列: [<span class="number">12</span>, <span class="number">90</span>, <span class="string">&#x27;abc&#x27;</span>]   元素: <span class="number">90</span>     结果: <span class="literal">True</span>  </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">in_self</span>(<span class="params"><span class="built_in">list</span>, char</span>):</span></span><br><span class="line">    flag = <span class="literal">False</span></span><br><span class="line">    <span class="keyword">for</span> index <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(<span class="built_in">list</span>)):</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">list</span>[index] == char:</span><br><span class="line">            flag = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">if</span> flag:</span><br><span class="line">        print(<span class="literal">True</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">in_self((<span class="number">12</span>, <span class="number">90</span>, <span class="string">&#x27;abc&#x27;</span>), <span class="string">&#x27;90&#x27;</span>)</span><br><span class="line">in_self([<span class="number">12</span>, <span class="number">90</span>, <span class="string">&#x27;abc&#x27;</span>], <span class="number">90</span>)                </span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="17">
+<li><p>写一个自己的replace函数，将指定字符串中指定的旧字符串转换成指定的新字符串  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">例如: 原字符串: <span class="string">&#x27;how are you? and you?&#x27;</span>   旧字符串: <span class="string">&#x27;you&#x27;</span>  新字符串:<span class="string">&#x27;me&#x27;</span>  结果: <span class="string">&#x27;how are me? and me?&#x27;</span></span><br><span class="line">                    </span><br><span class="line">                </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">replace</span>(<span class="params">str1: <span class="built_in">str</span>, old: <span class="built_in">str</span>, new: <span class="built_in">str</span></span>):</span></span><br><span class="line">s = str1.split(old)</span><br><span class="line">    re = new.join(s)</span><br><span class="line">    print(re)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">s1 = <span class="string">&#x27;how are you? and you?&#x27;</span></span><br><span class="line">replace(s1, <span class="string">&#x27;you&#x27;</span>, <span class="string">&#x27;me&#x27;</span>)   <span class="comment"># how are me? and me?                 </span></span><br></pre></td></tr></table></figure>
+
+
+
+
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/11/13/day-9%E4%BD%9C%E4%B8%9A/" data-id="cki06wkbd00005xpl46yl9pio" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/11/13/day16%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%BD%9C%E4%B8%9A/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/11/13/day-9%E4%BD%9C%E4%B8%9A/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/13/day16%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%BD%9C%E4%B8%9A/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/13/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

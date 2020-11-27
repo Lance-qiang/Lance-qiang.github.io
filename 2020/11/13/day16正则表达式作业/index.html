@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="利用正则表达式完成下面的操作:12import refrom re import fullmatch, search, findall, I  1.用户名匹配  ​            要求:    1.用户名只能包含数字 字母 下划线 ​                        2.不能以数字开头  ​                        3.⻓度在 6 到 16 位范围内 1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2020/11/13/day16%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%BD%9C%E4%B8%9A/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="利用正则表达式完成下面的操作:12import refrom re import fullmatch, search, findall, I  1.用户名匹配  ​            要求:    1.用户名只能包含数字 字母 下划线 ​                        2.不能以数字开头  ​                        3.⻓度在 6 到 16 位范围内 1">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-11-13T07:54:02.890Z">
+<meta property="article:modified_time" content="2020-11-13T07:54:02.890Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-day16正则表达式作业" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/13/day16%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%BD%9C%E4%B8%9A/" class="article-date">
+  <time datetime="2020-11-13T07:54:02.890Z" itemprop="datePublished">2020-11-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="利用正则表达式完成下面的操作"><a href="#利用正则表达式完成下面的操作" class="headerlink" title="利用正则表达式完成下面的操作:"></a>利用正则表达式完成下面的操作:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">from</span> re <span class="keyword">import</span> fullmatch, search, findall, I</span><br></pre></td></tr></table></figure>
+
+<p>1.用户名匹配 </p>
+<p>​            要求:    1.用户名只能包含数字 字母 下划线</p>
+<p>​                        2.不能以数字开头 </p>
+<p>​                        3.⻓度在 6 到 16 位范围内</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">user_name = <span class="built_in">input</span>(<span class="string">&#x27;请输入用户名：&#x27;</span>)</span><br><span class="line">result = fullmatch(<span class="string">r&#x27;[a-zA-Z_][\da-zA-Z_]&#123;5,15&#125;&#x27;</span>, user_name)</span><br><span class="line"><span class="comment"># result = fullmatch(r&#x27;(?i)[a-z][\da-zA-Z_]&#123;5,15&#125;&#x27;, user_name)</span></span><br><span class="line"><span class="keyword">if</span> result:</span><br><span class="line">    print(<span class="string">f&#x27;&quot;<span class="subst">&#123;user_name&#125;</span>&quot;合法&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	print(<span class="string">f&#x27;&quot;<span class="subst">&#123;user_name&#125;</span>&quot;不合法&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>密码匹配 </li>
+</ol>
+<p>​                要求:    1.不能包含!@#¥%^&amp;*这些特殊符号</p>
+<p>​                            2.必须以字母开头 </p>
+<p>​                            3.⻓度在 6 到 12 位范围内</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">password = <span class="built_in">input</span>(<span class="string">&#x27;请输入密码：&#x27;</span>)</span><br><span class="line">result = fullmatch(<span class="string">r&#x27;(?i)[a-z][^!@#¥%^&amp;*]&#123;5,11&#125;&#x27;</span>, password)</span><br><span class="line"><span class="keyword">if</span> result:</span><br><span class="line">    print(<span class="string">f&#x27;&quot;<span class="subst">&#123;password&#125;</span>&quot;合法&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>：</span><br><span class="line">	print(<span class="string">f&#x27;&quot;<span class="subst">&#123;password&#125;</span>&quot;不合法&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>ipv4 格式的 ip 地址匹配<br>提示: IP地址的范围是 0.0.0.0 - 255.255.255.255</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 方法一：正则</span></span><br><span class="line"><span class="comment"># 0-99合并的情况</span></span><br><span class="line"><span class="string">r&#x27;([1-9]?\d|1\d\d|2[0-4]\d|25[0-5])&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 0-99没有合并的情况</span></span><br><span class="line">re_str = <span class="string">r&#x27;((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.)&#123;3&#125;(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])&#x27;</span></span><br><span class="line">print(fullmatch(re_str, <span class="string">&#x27;9.255.56.234&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法二：按字符串</span></span><br><span class="line">ip = <span class="string">&#x27;255.255.255.255&#x27;</span></span><br><span class="line">nums = ip.split(<span class="string">&#x27;.&#x27;</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="built_in">len</span>(nums) != <span class="number">4</span>:</span><br><span class="line">    print(<span class="string">&#x27;ip地址不合法！&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">    	<span class="keyword">for</span> x <span class="keyword">in</span> nums:</span><br><span class="line">        	<span class="keyword">if</span> <span class="number">0</span> &lt;= <span class="built_in">int</span>(x) &lt;= <span class="number">255</span>:</span><br><span class="line">            	<span class="keyword">if</span> <span class="built_in">len</span>(x) &gt; <span class="number">1</span> <span class="keyword">and</span> x[<span class="number">0</span>] == <span class="string">&#x27;0&#x27;</span>:</span><br><span class="line">                	print(<span class="string">&#x27;ip地址不合法&#x27;</span>)</span><br><span class="line">                	<span class="keyword">break</span></span><br><span class="line">            	<span class="keyword">else</span>：</span><br><span class="line">            	print(<span class="string">&#x27;ip地址不合法&#x27;</span>)</span><br><span class="line">            	<span class="keyword">break</span></span><br><span class="line">    	<span class="keyword">else</span>:</span><br><span class="line">        	print(<span class="string">&#x27;ip地址合法&#x27;</span>)</span><br><span class="line">    <span class="keyword">except</span> ValueError:</span><br><span class="line">        print(<span class="string">&#x27;ip地址不合法&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>提取用户输入数据中的数值 (数值包括正负数 还包括整数和小数在内) 并求和 </li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例如:“-3.14good87nice19bye” &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&gt; -3.14 + 87 + 19 &#x3D; 102.86</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 方法一：</span></span><br><span class="line">result = split(<span class="string">r&#x27;[^\d.-]&#x27;</span>, <span class="string">&#x27;-3.14good87nice19bye&#x27;</span>)</span><br><span class="line">total = <span class="number">0</span></span><br><span class="line">str1 = <span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> result:</span><br><span class="line">    <span class="keyword">if</span> i != <span class="string">&#x27;&#x27;</span>:</span><br><span class="line">        str1 += i</span><br><span class="line">        str1 += <span class="string">&#x27;+&#x27;</span></span><br><span class="line">print(<span class="built_in">eval</span>(str1[<span class="number">0</span>:<span class="number">-1</span>]))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法二：</span></span><br><span class="line">str1 = <span class="string">&#x27;-3.14good87nice19bye&#x27;</span></span><br><span class="line">re_str = <span class="string">r&#x27;-?\d+\.?\d*&#x27;</span></span><br><span class="line">result = findall(re_str, findall)</span><br><span class="line">print(reduce(<span class="keyword">lambda</span> x, y:x+<span class="built_in">float</span>(y), result, <span class="number">0</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li><p>验证输入内容只能是汉字</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">re_str = <span class="string">r&#x27;[\u4e00-\u9fa5]+&#x27;</span></span><br><span class="line">print(fullmatch(re_str, <span class="string">&#x27;你好啊&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="6">
+<li><p>匹配整数或者小数（包括正数和负数）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">result = fullmatch(<span class="string">r&#x27;[-+]?(0|[1-9]\d*|0\.\d+|[1-9]\d*\.\d+)&#x27;</span>, <span class="string">&#x27;-41.265&#x27;</span>)</span><br><span class="line">print(result)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="7">
+<li><p>使用正则表达式获取字符串中所有的日期信息 <strong>匹配年月日日期 格式：2018-12-6</strong></p>
+<blockquote>
+<p>注意年的范围是1<del>9999， 月的范围是1</del>12， 日的范围是1<del>30或者1</del>31或者1~29（不考虑闰年）</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">re_str = <span class="string">&#x27;20181029&#x27;</span></span><br><span class="line">year = match(<span class="string">r&#x27;[1-9]\d&#123;3&#125;&#x27;</span>, re_str)</span><br><span class="line">month = fullmatch(<span class="string">r&#x27;\d*&#x27;</span>, re_str[<span class="built_in">len</span>(year.group()):])</span><br><span class="line">day = month.group()[<span class="number">2</span>:]</span><br><span class="line"></span><br><span class="line">print(<span class="string">f&#x27;当前日期为:<span class="subst">&#123;year.group()&#125;</span>-<span class="subst">&#123;month.group()[<span class="number">0</span>:<span class="number">2</span>]&#125;</span>-<span class="subst">&#123;day&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 年：</span></span><br><span class="line"><span class="comment"># [1-9]\d*&#123;0,3&#125;</span></span><br><span class="line"><span class="comment"># 月、日</span></span><br><span class="line"><span class="comment"># 1-30的正则：[1-9]|[12]\d|30</span></span><br><span class="line"><span class="comment"># 小月份：(0?[469]|11)-(0?[1-9]|[12]\d|30)</span></span><br><span class="line"><span class="comment"># 大月份：(0?[13578]|1[02])-(0?[1-9]|[12]\d|3[01])</span></span><br><span class="line"><span class="comment"># 二月：0?2-(0?[1-9]|[12]\d)</span></span><br><span class="line"></span><br><span class="line">re_str = <span class="string">r&#x27;[1-9]\d&#123;0,3&#125;-(((0?[469]|11)-(0?[1-9]|[12]\d|30))|((0?[13578]|1[02])-(0?[1-9]|[12]\d|3[01]))|(0?2-(0?[1-9]|[12]\d)))&#x27;</span></span><br><span class="line">print(fullmatch(re_str, <span class="string">&#x27;1998-2-29&#x27;</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="8">
+<li>替换字符串中的不良内容：将输入的内容中的不良内容全部替换成*（参考王者荣耀聊天要求）</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">result = re.sub(<span class="string">r&#x27;[妈操草曹傻逼垃圾]&#x27;</span>, <span class="string">&#x27;*&#x27;</span>, <span class="string">&#x27;草大傻逼&#x27;</span>)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/11/13/day16%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%BD%9C%E4%B8%9A/" data-id="cki06wkbi00015xpl39z270pq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/11/13/day-9%E4%BD%9C%E4%B8%9A/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/11/13/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/11/13/day-9%E4%BD%9C%E4%B8%9A/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/13/day16%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%BD%9C%E4%B8%9A/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/13/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
